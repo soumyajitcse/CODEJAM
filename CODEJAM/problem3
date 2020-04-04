@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int k,n,j,i,s,e;
+    cin >> n;
+    string C,J;
+    string S="";
+    for(i = 0; i < n; i++)
+        cin >> m;
+        for(j = 0; j < m; j++)
+            cin >> s[j] >> ' ' >> e[j];
+            if((e[j] - s[j]) == 1440)
+                cout << "IMPOSSIBLE";
+            else 
+            {
+                if(s[j+2] > s[j] && s[j+2] < e[j])
+                    S+='J';
+                
+            }
+}

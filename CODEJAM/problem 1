@@ -1,0 +1,31 @@
+trace=input()
+trace=int(trace)
+for i in range(trace):
+    Num=input()
+    Num=int(Num)
+    diagonal=0
+    row=0
+    col=0
+    mx=[]
+    chk=[]
+    for j in range(1,Num+1):
+        chk.append(j)
+    for j in range(Num):
+        x=[]
+        l=input()
+        l=l.split()
+        mx.append(l)
+        diagonal+=int(l[j])
+        for k in l:
+            x.append(int(k))
+        x.sort()
+        if(x!=chk):
+            row+=1;
+    for j in range(Num):
+        y=[]
+        for k in range(Num):
+            y.append(int(mx[k][j]))
+        y.sort()
+        if(y!=chk):
+            col+=1;
+    print('Case #%d:'%(i+1),diagonal,row,col)

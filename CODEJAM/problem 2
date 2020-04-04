@@ -1,0 +1,32 @@
+N = int(input())
+for z in range(N):
+    a = input()
+    num = []
+    for i in a:
+        num.append(int(i))
+    count = 0
+    i = 0
+    
+    while(i < len(num)):
+        d = num[i] - count
+        count = num[i]
+        if d > 0:
+            for j in range(d):
+                num.insert(i,'(')
+            i+=d
+        elif d < 0:
+            for j in range(abs(d)):
+                num.insert(i,')')
+            i+=abs(d)
+        i+=1
+    
+    N = int(a[-1])
+    for i in range(N):
+        num.append(')')
+        
+    str1 = " "
+    for i in num:
+        str1+=str(i)
+        
+    print("Case #{}: {}".format(z+1,str1))
+    
